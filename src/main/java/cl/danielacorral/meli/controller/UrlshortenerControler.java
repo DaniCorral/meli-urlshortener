@@ -1,11 +1,13 @@
 package cl.danielacorral.meli.controller;
 
+import cl.danielacorral.meli.DTO.UrlDTO;
 import cl.danielacorral.meli.service.IUrlshortenerService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -16,30 +18,24 @@ public class UrlshortenerControler {
     IUrlshortenerService urlshortenerService;
 
     @Operation(summary = "Crear url más corta")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "url creada con exito"),
-            @ApiResponse(responseCode = "400", description = "error de response"),
-            @ApiResponse(responseCode = "500", description = "error en los parametros")
-
-    })
     @PostMapping("/url/")
-    public String createURL(
-            @RequestBody String longURL
-            ){
-        return urlshortenerService.createShortURL(longURL);
+    public ResponseEntity<String> createURL(
+            @RequestBody String longURL){
+        try {
+            String shortURL = urlshortenerService.createShortURL(longURL);
+            return ResponseEntity.status(HttpStatus.CREATED).body(shortURL);
+        }catch (Exception e){
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+                    .body("Error al crear la URL: " + e.getMessage());
+        }
     }
 
 
     @Operation(summary = "Obtener url más corta")
-    @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "url obtenida con exito"),
-            @ApiResponse(responseCode = "400", description = "error de response"),
-            @ApiResponse(responseCode = "500", description = "error en los parametros")
-
-    })    @GetMapping("/url/")
-    public String getShortURL(
+    @GetMapping("/url/")
+    public UrlDTO getShortURL(
             @RequestParam String shortURL
             ){
-        return urlshortenerService.createShortURL(shortURL);
+        return urlshortenerService.getLongURL(shortURL);
     }
 }
