@@ -1,8 +1,8 @@
-package cl.danielacorral.meli.service;
+package cl.danielacorral.meli.domain.service;
 
-import cl.danielacorral.meli.DTO.UrlDTO;
-import cl.danielacorral.meli.IUrlshortenerRepository;
-import cl.danielacorral.meli.UrlEntity;
+import cl.danielacorral.meli.domain.dto.UrlDTO;
+import cl.danielacorral.meli.repository.IUrlshortenerRepository;
+import cl.danielacorral.meli.domain.entity.UrlEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -67,7 +67,7 @@ public class UrlshortenerService implements IUrlshortenerService {
             UrlDTO shortURL = getShortURL(longUrl);
             return shortURL.getShortUrl();
         }else {
-            throw new Exception("La URL proporcionada está vacía o no es válida.");
+            throw new Exception("URL proporcionada está vacía o no es válida.");
         }
 
     };
@@ -112,8 +112,9 @@ public class UrlshortenerService implements IUrlshortenerService {
     }
     */
 
+
     @Override
-    public UrlDTO getLongURL(String shortURL) {
+    public UrlDTO getLongURL(String shortURL){
         UrlEntity urlEntity = iUrlshortenerRepository.findUrlLong(shortURL);
         return buildDTOFromEntity(urlEntity);
     }

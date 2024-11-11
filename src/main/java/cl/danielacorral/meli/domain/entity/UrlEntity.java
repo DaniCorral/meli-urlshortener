@@ -1,4 +1,4 @@
-package cl.danielacorral.meli;
+package cl.danielacorral.meli.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

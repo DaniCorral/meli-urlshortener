@@ -1,4 +1,4 @@
-package cl.danielacorral.meli.DTO;
+package cl.danielacorral.meli.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
