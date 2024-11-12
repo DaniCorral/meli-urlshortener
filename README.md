@@ -105,4 +105,4 @@ GET /api/url/original?shortURL=http://localhost:8080/meli/0q1s
 
 ## 🤝 Contribución
 
-¡Las contribuciones son bienvenidas! Si deseas contribuir, realiza un fork del repositorio y abre un pull request con tus mejoras.
+¡Las contribuciones son bienvenidas!
