@@ -32,10 +32,10 @@ Sigue estos pasos para instalar y configurar el proyecto en tu máquina local.
 
 ```bash
 # Clona el repositorio
-git clone https://github.com/usuario/acortador-url.git
+git clone https://github.com/DaniCorral/meli-urlshortener.git
 
 # Cambia al directorio del proyecto
-cd acortador-url
+cd meli-urlshortener
 
 # Ejecuta el proyecto con Maven
 mvn spring-boot:run
@@ -43,6 +43,7 @@ mvn spring-boot:run
 
 ### Configuración de la Base de Datos
 
+PostgresSQL
 Asegúrate de crear la siguiente tabla en tu base de datos antes de ejecutar la aplicación:
 
 ```sql
