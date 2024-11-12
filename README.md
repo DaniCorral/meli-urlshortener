@@ -8,6 +8,7 @@ Este proyecto es una API REST para acortar URLs. Permite convertir URLs largas e
 - [Características](#características)
 - [Tecnologías Usadas](#tecnologías-usadas)
 - [Instalación](#instalación)
+- [Configuración de la Base de Datos](#configuración-de-la-base-de-datos)
 - [Uso](#uso)
 - [Documentación de la API](#documentación-de-la-api)
 - [Contribución](#contribución)
