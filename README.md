@@ -8,6 +8,7 @@ Este proyecto es una API REST para acortar URLs. Permite convertir URLs largas e
 - [Características](#características)
 - [Tecnologías Usadas](#tecnologías-usadas)
 - [Instalación](#instalación)
+- [Configuración de la Base de Datos](#configuración-de-la-base-de-datos)
 - [Uso](#uso)
 - [Documentación de la API](#documentación-de-la-api)
 - [Contribución](#contribución)
@@ -30,12 +31,19 @@ Este proyecto es una API REST para acortar URLs. Permite convertir URLs largas e
 
 Sigue estos pasos para instalar y configurar el proyecto en tu máquina local.
 
+```bash
+# Clona el repositorio
+git clone https://github.com/usuario/acortador-url.git
+
+# Cambia al directorio del proyecto
+cd acortador-url
 
 # Ejecuta el proyecto con Maven
 mvn spring-boot:run
 ```
 
 ### Configuración de la Base de Datos
+
 PostgresSQL
 Asegúrate de crear la siguiente tabla en tu base de datos antes de ejecutar la aplicación:
 
@@ -45,7 +53,6 @@ CREATE TABLE urls (
     longUrl TEXT NOT NULL,
     shortUrl TEXT NOT NULL
 );
-```
 
 ### Variables de Entorno
 
@@ -97,4 +104,3 @@ GET /api/url/original?shortURL=http://localhost:8080/meli/0q1s
 ## 🤝 Contribución
 
 ¡Las contribuciones son bienvenidas! Si deseas contribuir, realiza un fork del repositorio y abre un pull request con tus mejoras.
-
