@@ -42,7 +42,7 @@ mvn spring-boot:run
 ```
 
 ### Configuración de la Base de Datos
-
+PostgresSQL
 Asegúrate de crear la siguiente tabla en tu base de datos antes de ejecutar la aplicación:
 
 ```sql
@@ -51,6 +51,7 @@ CREATE TABLE urls (
     longUrl TEXT NOT NULL,
     shortUrl TEXT NOT NULL
 );
+```
 
 ### Variables de Entorno
 
