@@ -36,7 +36,7 @@ Sigue estos pasos para instalar y configurar el proyecto en tu máquina local.
 git clone https://github.com/usuario/acortador-url.git
 
 # Cambia al directorio del proyecto
-cd acortador-url
+cd meli-urlshortener
 
 # Ejecuta el proyecto con Maven
 mvn spring-boot:run
@@ -62,7 +62,7 @@ Asegúrate de configurar las variables de entorno necesarias, como los detalles 
 
 ## 🚀 Uso
 
-Ejecuta el proyecto y accede a la API en `http://localhost:8080/api`.
+Ejecuta el proyecto y accede a la API en `http://localhost:8080/api-urlshortener-meli/swagger-ui/index.html`.
 
 ### Endpoints
 
