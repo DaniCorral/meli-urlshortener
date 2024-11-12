@@ -53,6 +53,8 @@ CREATE TABLE urls (
     longUrl TEXT NOT NULL,
     shortUrl TEXT NOT NULL
 );
+```
+
 
 ### Variables de Entorno
 
