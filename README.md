@@ -30,12 +30,6 @@ Este proyecto es una API REST para acortar URLs. Permite convertir URLs largas e
 
 Sigue estos pasos para instalar y configurar el proyecto en tu máquina local.
 
-```bash
-# Clona el repositorio
-git clone https://github.com/usuario/acortador-url.git
-
-# Cambia al directorio del proyecto
-cd acortador-url
 
 # Ejecuta el proyecto con Maven
 mvn spring-boot:run
